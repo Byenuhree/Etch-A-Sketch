@@ -1,5 +1,101 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "SketchMe";
+  src: url(font/SketchMe.ttf);
+}
+
+body {
+  border: 1px solid rebeccapurple;
+  font-family: "SketchMe";
+  font-size: 20px;
+}
+
+.etch-a-sketch {
+  border: 1px solid saddlebrown;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem 0 1px 0;
+  font-size: 30px;
+}
+
+.mode {
+  border: 1px solid red;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.btns {
+  border: 1px solid beige;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#colorPicker {
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+#colorPicker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+#colorPicker::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+button {
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 .sketch-board {
   width: 500px;
   height: 500px;
   display: grid;
+  margin: 0% auto;
+}
+.set-size {
+  text-align: center;
+}
+
+[type="color"] {
+  appearance: none;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+
+[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+.color-picker {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f8f9f9;
 }
