@@ -13,11 +13,12 @@
       <div class="content">
         <div class="btns">
           <!--  -->
-          <div class="color-picker-container">
+          <div class="colorPr-container">
             <input type="color" id="colorPicker" />
+            <button id="colorBtn" onclick="changeColor('selected')">
+              Color
+            </button>
           </div>
-
-          <button id="colorBtn" onclick="changeColor('selected')">Color</button>
           <button id="black-button" onclick="changeColor('black')">
             Black
           </button>
@@ -25,23 +26,25 @@
             Erase
           </button>
           <button id="random-button" onclick="changeColor('random')">
-            Gay mode
+            Random
           </button>
           <button id="clear-button" onclick="resetBoard()">Clear</button>
         </div>
         <div class="sketch-board"></div>
-        <div class="set-size">
-          <input
-            type="range"
-            id="rangeInput"
-            min="2"
-            max="100"
-            placeholder="Size of Board"
-            value="16"
-            onchange="changeSize(this.value)"
-          />
-          <output id="output">12</output>
-          <button>Canva Size</button>
+        <div class="size-container">
+          <div class="set-size">
+            <input
+              type="range"
+              id="rangeInput"
+              min="2"
+              max="100"
+              placeholder="Size of Board"
+              value="16"
+              onchange="changeSize(this.value)"
+            />
+            <output id="output">12</output>
+          </div>
+          <button id="canva">Canva Size</button>
         </div>
       </div>
     </div>
